@@ -1,7 +1,6 @@
 services:
   db:
     image: postgres:16
-    container_name: db_case_exercises
 
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -24,7 +23,6 @@ services:
 
   flyway:
     image: flyway/flyway:10
-    container_name: flyway_exercises
 
     depends_on:
       db:
